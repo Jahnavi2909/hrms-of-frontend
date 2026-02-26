@@ -1,0 +1,383 @@
+/* ==========================================
+   GLOBAL RESET
+========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.layout {
+  display: flex;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.nav-bar {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 240px;
+  right: 0;
+  background: #fff;
+  z-index: 1030;
+  transition: left 0.3s ease;
+}
+
+.nav-bar.collapsed {
+  left: 70px;
+}
+
+
+.logo {
+  height: 55px;
+}
+
+.sidebar-toggle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Avatar */
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  background: #4f46e5;
+  color: white;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================
+   HEADER LAYOUT FIX
+========================================== */
+
+/* When sidebar collapsed */
+.nav-bar.collapsed {
+  left: 70px;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: 24px;
+  padding-top: 94px;
+  /* 70px header + spacing */
+  transition: margin-left 0.3s ease;
+  width: 100%;
+}
+
+/* When collapsed */
+.main-content.collapsed {
+  margin-left: 70px;
+}
+
+
+/* ===== ICON CENTER FIX ===== */
+
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* ==========================================
+   SIDEBAR (DESKTOP)
+========================================== */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #1f2937;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  overflow-x: hidden;   
+  z-index: 3000;         
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Sidebar Links */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  margin: 4px 8px;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: background 0.25s ease;
+  overflow: hidden;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-link.active {
+  background: #4f46e5;
+}
+
+/* ICON - always fixed */
+.sidebar-link .icon {
+  font-size: 18px;
+  min-width: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* LABEL animation */
+.sidebar-link .label {
+  white-space: nowrap;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Hide label when collapsed */
+.sidebar.collapsed .label {
+  opacity: 0;
+  transform: translateX(-10px);
+  pointer-events: none;
+}
+
+/* Brand */
+.sidebar-brand {
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Push logout to bottom */
+.sidebar .nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.bell-badge {
+  left: 5px;
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content {
+  margin-left: 240px;
+  padding: 24px;
+  padding-top: 94px;
+  transition: margin-left 0.3s ease;
+}
+
+
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+
+@media (max-width: 992px) {
+
+  .sidebar {
+    width: 240px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    /* IMPORTANT */
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .nav-bar {
+    left: 0 !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding-top: 90px;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1500;
+  }
+}
+
+
+/* ==========================================
+   DROPDOWN FIXES
+========================================== */
+
+.dropdown-menu {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-item {
+  padding: 10px 16px;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* ==========================================
+   SMALL DEVICES
+========================================== */
+
+@media (max-width: 768px) {
+
+  .nav-bar {
+    height: 60px;
+  }
+
+  .logo {
+    height: 45px;
+  }
+
+  .avatar-circle {
+    width: 34px;
+    height: 34px;
+  }
+
+}
+
+
+
+/* Sidebar toggle button inside sidebar */
+.sidebar-collapse-btn {
+  background: #374151;
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar-collapse-btn:hover {
+  background: #4f46e5;
+}
+
+/* When collapsed - center button */
+.sidebar.collapsed .sidebar-brand {
+  justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-collapse-btn {
+  margin-top: 10px;
+}
+
+
+@media (max-width: 992px) {
+
+  .nav-bar {
+    left: 0 !important;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding-top: 80px;
+  }
+}
+
+
+/* ==========================================
+   SIDEBAR TOOLTIP (ONLY WHEN COLLAPSED)
+========================================== */
+
+.sidebar-link {
+  position: relative;
+  
+}
+
+/* Tooltip */
+.sidebar.collapsed .sidebar-link::after {
+  content: attr(data-tooltip);
+  position: fixed;         
+  left: 86px;               
+  top: auto;
+  transform: none;
+  background: #111827;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
+
+
+.sidebar.collapsed .sidebar-link::before {
+  content: "";
+  position: fixed;        
+  left: 84px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #111827 transparent transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
+
+
+/* Show on hover */
+.sidebar.collapsed .sidebar-link:hover::after,
+.sidebar.collapsed .sidebar-link:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar.collapsed {
+    width: 80px;
+  }
+}

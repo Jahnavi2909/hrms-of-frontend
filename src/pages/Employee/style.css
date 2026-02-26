@@ -1,0 +1,67 @@
+
+/* DESKTOP TABLE ONLY             */
+
+@media (min-width: 769px) {
+  .mobile-list {
+    display: none !important;
+  }
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+
+/* MOBILE CARD LAYOUT */
+
+@media (max-width: 768px) {
+
+  .desktop-table {
+    display: none !important;
+  }
+
+  .mobile-list {
+    display: block;
+  }
+
+  .mobile-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+
+  .mobile-card .field {
+    margin-bottom: 10px;
+  }
+
+  .mobile-card .label {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.6;
+  }
+
+  .mobile-card .value {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+
+  .mobile-card .actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .mobile-card .actions button {
+    font-size: 18px;
+  }
+}
+
+

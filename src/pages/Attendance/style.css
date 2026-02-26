@@ -1,0 +1,166 @@
+
+/* DESKTOP - Show Table Only     */
+
+@media (min-width: 769px) {
+  .attendance-mobile-list {
+    display: none !important;
+  }
+}
+
+
+/* MOBILE -  Cards    */
+
+@media (max-width: 768px) {
+
+  .attendance-table {
+    display: none !important;
+  }
+
+  .attendance-mobile-list {
+    display: block !important;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+
+  .mobile-card .field {
+    margin-bottom: 10px;
+  }
+
+  .mobile-card .label {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.6;
+  }
+
+  .mobile-card .value {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .mobile-card .badge {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .mobile-card .value {
+    font-size: 14px;
+  }
+  .mobile-card .label {
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .attendance-mobile-list {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .attendance-table {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 220px;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.timeline-row.today {
+  background: #f5f9ff;
+  border-radius: 6px;
+}
+
+.date-box {
+  text-align: center;
+  font-size: 13px;
+}
+
+.timeline-track {
+  position: relative;
+  height: 24px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #ddd;
+  transform: translateY(-50%);
+}
+
+.timeline-work {
+  position: absolute;
+  top: 50%;
+  height: 6px;
+  background: #28a745;
+  border-radius: 10px;
+  transform: translateY(-50%);
+}
+
+.timeline-status {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  background: #ffecec;
+  color: #d9534f;
+}
+
+.timeline-status.present {
+  background: #e6f4ea;
+  color: #198754;
+}
+
+.time-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: right;
+  font-size: 12px;
+}
+
+
+.today-col {
+  background: #f0f9ff !important;
+  border: 1px solid #38bdf8 !important;
+}
+
+
+.mobile-filter-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-filter-collapse.open {
+  max-height: 1000px;
+  margin-top: 10px;
+}
+
+.filter-section {
+  position: sticky;
+  top: 80px;
+  z-index: 1050;
+  background: linear-gradient(to left, #439bee ,#1A73E8, #4b7398);
+  padding: 10px;
+  border-radius: 10px;
+}

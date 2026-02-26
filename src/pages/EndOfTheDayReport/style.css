@@ -1,0 +1,167 @@
+
+
+.eod-header h1 {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    .eod-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+
+    .eod-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .eod-date-filter {
+        width: 100%;
+    }
+}
+
+/* EOD FORM */
+.eod-form textarea {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .eod-form button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+/* TABLE RESPONSIVE */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table td,
+.table th {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+
+    .table td,
+    .table th {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .table td:nth-child(4),
+    .table th:nth-child(4) {
+        display: none;
+    }
+
+    .table button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
+
+/* BADGES*/
+.badge {
+    font-size: 13px;
+    padding: 6px 10px;
+}
+
+/* EMPTY STATE*/
+.empty-row {
+    text-align: center;
+    font-size: 1rem;
+    padding: 20px 0;
+}
+
+/* CARD SPACING */
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 1rem;
+    }
+}
+
+/* MOBILE CARD VIEW FOR EOD */
+.eod-mobile-list {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        display: none !important;
+    }
+
+    .eod-mobile-list {
+        display: block;
+    }
+
+    .eod-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        padding: 16px;
+        margin-bottom: 15px;
+    }
+
+    .eod-card .field {
+        margin-bottom: 10px;
+    }
+
+    .eod-card .label {
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0.7;
+    }
+
+    .eod-card .value {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .eod-card .badge {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .eod-card button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+.mobile-filter-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.filter-section-continer{
+    background: linear-gradient(to left, #4FABFF ,#1A73E8, #4b7398);
+    position: sticky;
+    top: 70px;
+    z-index: 1050;
+    padding: 10px;
+    border-radius: 5px;
+
+}

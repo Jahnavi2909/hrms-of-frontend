@@ -1,0 +1,100 @@
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+
+.login-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+
+@media (max-width: 768px) {
+  .login-card h2 {
+    font-size: 1.6rem;
+  }
+  .login-card p {
+    font-size: 0.95rem;
+  }
+}
+
+
+.form-control,
+.form-select {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .form-control,
+  .form-select {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .form-label {
+    font-size: 0.85rem;
+  }
+}
+
+
+button.btn {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  button.btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+
+.divider {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  line-height: 0.1em;
+  margin: 20px 0;
+}
+
+.divider span {
+  background: white;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+.alert {
+  font-size: 0.95rem;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .alert {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+}
+
+
+.login-container .text-muted.small {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .login-container .text-muted.small {
+    font-size: 0.75rem;
+  }
+}

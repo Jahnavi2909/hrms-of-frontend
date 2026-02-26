@@ -1,0 +1,144 @@
+/*  MAIN LAYOUT  */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: none;
+  background: #ffffff;
+}
+
+/* INPUT GROUP  */
+.input-group-text {
+  background: #f1f3f5;
+  border-radius: 8px 0 0 8px;
+}
+
+.input-group .form-control {
+  border-radius: 0 8px 8px 0;
+}
+
+.input-group .form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.welcomeback-text {
+  color: #000 !important;
+}
+
+
+/* DIVIDER */
+.divider {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  line-height: 0.1em;
+}
+
+.divider span {
+  background: white;
+}
+
+/* RESPONSIVE RULES  */
+
+@media (max-width: 768px) {
+  .login-card {
+    padding: 15px;
+  }
+
+  .login-page {
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-size: 1.6rem !important;
+  }
+
+  .input-group .form-control {
+    font-size: 15px;
+  }
+
+  .w-100.py-2 {
+    padding: 10px 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-container {
+    max-width: 100%;
+  }
+
+  .login-card {
+    padding: 10px;
+  }
+
+  .login-page {
+    padding: 20px 10px;
+  }
+
+  h2 {
+    font-size: 1.4rem !important;
+  }
+
+  p,
+  label,
+  .small,
+  .text-muted {
+    font-size: 14px !important;
+  }
+
+  .input-group-text i {
+    font-size: 14px;
+  }
+
+  .input-group .form-control {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  Button.w-100 {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .login-card {
+    padding: 8px;
+  }
+
+  .input-group-text {
+    background: #f1f3f5;
+    border-radius: 8px 0 0 8px;
+    width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .input-group .form-control {
+    border-radius: 8px;
+  }
+}
+
+.copy {
+ --bs-text-opacity: 1;
+    color: #f1f1f1 !important;
+}

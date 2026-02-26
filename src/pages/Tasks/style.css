@@ -1,0 +1,192 @@
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+}
+
+.card-header {
+  font-size: 1.2rem;
+}
+
+.task-label{
+  color: #fff !important;
+}
+
+
+
+/* FORM and HEADER RESPONSIVE */
+@media (max-width: 768px) {
+  .d-flex.justify-content-between.align-items-center.mb-4 {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .d-flex.justify-content-between.align-items-center.mb-4 h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .d-flex.justify-content-between.align-items-center.mb-4 .form-group {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .d-flex.justify-content-between.align-items-center.mb-4 input[type="date"] {
+    width: 100% !important;
+  }
+}
+
+/* CARD FORM RESPONSIVE */
+@media (max-width: 768px) {
+  .card.mt-4 {
+    border-radius: 14px !important;
+  }
+
+  .card-body {
+    padding: 1.5rem !important;
+  }
+
+  form .form-control,
+  form .form-select {
+    font-size: 0.95rem !important;
+    padding: 10px !important;
+  }
+
+  button.btn {
+    width: 100% !important;
+    margin-top: 8px;
+  }
+
+  .alert {
+    font-size: 0.9rem !important;
+    padding: 10px 14px !important;
+  }
+}
+
+/* TABLE RESPONSIVE */
+@media (max-width: 992px) {
+  table.table {
+    font-size: 0.9rem !important;
+  }
+
+  table.table thead th {
+    white-space: nowrap !important;
+  }
+
+  table.table tbody td {
+    vertical-align: middle !important;
+  }
+
+  table.table button.btn-sm {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .badge {
+    padding: 6px 10px !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  table.table td small {
+    font-size: 0.7rem !important;
+  }
+
+  table.table td strong {
+    font-size: 0.85rem !important;
+  }
+}
+
+/* MOBILE CARD VIEW FOR TASKS */
+.task-mobile-list {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .table-responsive {
+    display: none !important;
+  }
+
+  .task-mobile-list {
+    display: block;
+  }
+
+  .task-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    padding: 16px;
+    margin-bottom: 15px;
+  }
+
+  .task-card .field {
+    margin-bottom: 10px;
+  }
+
+  .task-card .label {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.6;
+  }
+
+  .task-card .value {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .task-card .badge {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .task-card button {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+.mobile-filter {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.mobile-filter label {
+  width: 100px;
+}
+
+.mobile-filter-section ,.desktop-filter-section{
+  position: sticky;
+  top: 70px;
+  z-index: 1050;
+  background: linear-gradient(to left, #4FABFF ,#1A73E8, #4b7398);
+  border-radius: 5px;
+}
+
+
+.mobile-filter-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

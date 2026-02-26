@@ -1,0 +1,172 @@
+
+@media (max-width: 768px) {
+  h1.mb-4 {
+    font-size: 22px !important;
+    margin-bottom: 14px !important;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .add-dept-form {
+    display: flex;
+    flex-direction: column !important;
+    gap: 10px;
+  }
+
+  .add-dept-form input,
+  .add-dept-form button {
+    width: 100% !important;
+  }
+}
+
+.table-responsive {
+  overflow-x: auto !important;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  table th,
+  table td {
+    font-size: 14px !important;
+    padding: 8px !important;
+    white-space: nowrap !important;
+  }
+
+  table .btn {
+    padding: 6px 10px !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    display: none !important;
+  }
+
+  table .btn {
+    width: 100% !important;
+    margin-bottom: 5px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  td.text-center {
+    font-size: 14px !important;
+    padding: 15px !important;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0 10px !important;
+  }
+
+  .modal-title {
+    font-size: 18px !important;
+  }
+
+  .modal-body input {
+    font-size: 14px !important;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .modal-footer button {
+    width: 100% !important;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .table-responsive {
+    display: none !important;
+  }
+}
+
+
+.department-mobile-list {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .department-mobile-list {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+
+.department-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border-left: 4px solid #0d6efd;
+}
+
+.dept-field {
+  margin-bottom: 12px;
+}
+
+.dept-field .label {
+  font-size: 13px;
+  color: #6c757d;
+  display: block;
+}
+
+.dept-field .value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+}
+
+
+.dept-actions button {
+  font-size: 14px !important;
+}
+
+
+@media (max-width: 768px) {
+  h1.mb-4 {
+    font-size: 22px !important;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .d-flex.gap-2.flex-wrap {
+    flex-direction: column !important;
+  }
+
+  .d-flex.gap-2.flex-wrap input,
+  .d-flex.gap-2.flex-wrap button {
+    width: 100% !important;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 0 10px !important;
+  }
+
+  .modal-footer {
+    flex-direction: column !important;
+  }
+
+  .modal-footer button {
+    width: 100% !important;
+  }
+}
+

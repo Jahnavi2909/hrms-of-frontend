@@ -1,0 +1,422 @@
+/* GLOBAL PAGE SPACING (MOBILE) */
+@media (max-width: 768px) {
+  .py-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  h4 {
+    font-size: 18px !important;
+  }
+}
+
+.text-muted1 {
+  color: #fff;
+  --bs-text-opacity: 1;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link,.quick-stats-title, .employee-management-title {
+  color: #ffffff;
+}
+
+
+/*  HEADER (TITLE + BUTTON ROW) */
+@media (max-width: 768px) {
+  .d-flex.justify-content-between.mb-4 {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card .card-body p {
+    font-size: 14px !important;
+  }
+
+  .card .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* STATS GRID (Admin Overview) */
+@media (max-width: 992px) {
+  .stat-card h3 {
+    font-size: 24px !important;
+  }
+
+  .stat-card h6 {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    text-align: center;
+  }
+
+  .g-4>[class^="col"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .g-4>[class^="col"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* TABS RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-tabs .nav-link {
+    font-size: 14px !important;
+    padding: 8px !important;
+  }
+}
+
+/*  EMPLOYEE TABLE  */
+@media (max-width: 768px) {
+
+  table th,
+  table td {
+    padding: 8px 6px !important;
+    font-size: 13px !important;
+  }
+
+  table .btn {
+    padding: 4px 6px !important;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+
+  table th:nth-child(3),
+  table td:nth-child(3),
+  table th:nth-child(5),
+  table td:nth-child(5) {
+    display: none;
+  }
+}
+
+/* EMPLOYEE DASHBOARD LAYOUT */
+@media (max-width: 992px) {
+
+  .employee-dashboard .row>.col-md-8,
+  .employee-dashboard .row>.col-md-4 {
+    max-width: 100%;
+    flex: 100%;
+  }
+}
+
+/* QUICK LINKS CARD */
+@media (max-width: 768px) {
+  .employee-dashboard .btn.w-100 {
+    font-size: 14px !important;
+    padding: 10px !important;
+  }
+}
+
+/* COLLAPSIBLE FORM */
+@media (max-width: 768px) {
+
+  .collapse .card,
+  .collapse form {
+    padding: 10px !important;
+  }
+}
+
+/* EMPLOYEE FORM BUTTONS */
+@media (max-width: 768px) {
+  .collapse .btn {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+}
+
+/* GENERAL TEXT SIZE FOR SMALL DEVICES */
+@media (max-width: 480px) {
+
+  p,
+  small {
+    font-size: 12px !important;
+  }
+
+  td small {
+    display: block;
+  }
+}
+
+
+.attendance-card {
+  max-width: 400px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f9fbff, #eef3ff);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.work-timer {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2b4eff;
+}
+
+.check-btn {
+  padding: 10px 22px;
+  font-weight: 600;
+  border-radius: 30px;
+  min-width: 140px;
+}
+
+.check-in {
+  background-color: #2b4eff;
+  border: none;
+}
+
+.check-in:hover {
+  background-color: #1f3ad6;
+}
+
+.check-out {
+  background-color: #ff4d4f;
+  border: none;
+}
+
+.check-out:hover {
+  background-color: #d9363e;
+}
+
+
+/* ====== GLOBAL DASHBOARD ====== */
+.employee-dashboard {
+  padding: 20px;
+}
+
+/* Fade in page */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== CARDS ====== */
+.animated-card {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.animated-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ====== ATTENDANCE CARD ====== */
+.attendance-card {
+  min-height: 260px;
+}
+
+/* Timer */
+.work-timer {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #0d6efd;
+}
+
+/* Pulse animation for timer */
+.pulse {
+  animation: pulseGlow 1.6s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(13, 110, 253, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+  }
+}
+
+/* ====== BUTTONS ====== */
+.check-btn {
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.check-in {
+  background: linear-gradient(135deg, #28a745, #5dd879);
+  border: none;
+  color: white;
+}
+
+.check-out {
+  background: linear-gradient(135deg, #dc3545, #ff6b6b);
+  border: none;
+  color: white;
+}
+
+.check-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== STATUS TEXT ====== */
+.text-success {
+  animation: glowGreen 1.5s infinite alternate;
+}
+
+@keyframes glowGreen {
+  from {
+    text-shadow: 0 0 4px rgba(40, 167, 69, 0.4);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(40, 167, 69, 0.9);
+  }
+}
+
+/* ====== QUICK ACTION BUTTONS ====== */
+button.btn-outline-secondary {
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+button.btn-outline-secondary:hover {
+  background-color: #0d6efd;
+  color: white;
+  transform: translateX(4px);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .work-timer {
+    font-size: 2.2rem;
+  }
+
+  .attendance-card {
+    min-height: auto;
+  }
+
+  .employee-dashboard {
+    padding: 10px;
+  }
+}
+
+
+.checkin-ui-card {
+  padding-top: 50px;        
+  overflow: visible;
+  position: relative;
+}
+
+.checkin-avatar {
+  width: 100px;
+  height: 100px;
+  background: #a855f7;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -36px;             
+  left: 50%;
+  transform: translateX(-50%);
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.checkin-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.checkin-outline-btn {
+  border: 2px solid #22c55e;
+  background: transparent;
+  color: #22c55e;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 20px;
+}
+
+.checkin-outline-btn:hover {
+  background: #22c55e;
+  color: #fff;
+}
+
+
+.checkin-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.checkin-timer span {
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border-radius: 6px;
+  min-width: 34px;
+  text-align: center;
+}
+
+.checkin-timer .colon {
+  background: transparent;
+  padding: 0;
+  min-width: auto;
+  font-weight: 700;
+}
+
+
+@media (max-width: 767px) {
+  
+.checkin-avatar {
+  width: 75px;
+  height: 75px;
+}
+}

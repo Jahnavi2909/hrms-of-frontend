@@ -1,0 +1,60 @@
+
+name: Deploy Frontend to S3 and CloudFront
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: CI=false npm run build
+
+      - name: Debug - Check Build Folder
+        run: |
+          echo "Listing repo root:"
+          ls -la
+          echo "Listing build folder (expected output):"
+          ls -la build || echo "Build folder not found!"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      - name: Who am I? (debug)
+        run: aws sts get-caller-identity || true
+
+      - name: Deploy to S3
+        run: aws s3 sync build/ s3://hrms--frontend  --delete
+
+      - name: Invalidate CloudFront Cache (conditional)
+        env:
+          CF_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: |
+          if [ -n "${CF_ID}" ]; then
+            echo "Invalidating CloudFront distribution ${CF_ID}"
+            aws cloudfront create-invalidation --distribution-id "${CF_ID}" --paths "/*"
+          else
+            echo "CLOUDFRONT_DISTRIBUTION_ID not set; skipping invalidation"
+          fi

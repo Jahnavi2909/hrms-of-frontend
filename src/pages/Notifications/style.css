@@ -1,0 +1,116 @@
+/* MOBILE NOTIFICATION CARDS*/
+@media (max-width: 768px) {
+  .notification-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .notification-card .d-flex.justify-content-between {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .notification-card .badge {
+    font-size: 0.75rem;
+  }
+
+  .notification-card p {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  .notification-card strong {
+    font-size: 1rem;
+  }
+
+  .notification-card .d-flex.gap-2 button {
+    flex: 1;
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+}
+
+/* TABLE RESPONSIVE FOR MOBILE*/
+@media (max-width: 768px) {
+  .table-responsive table,
+  .table-responsive thead,
+  .table-responsive tbody,
+  .table-responsive th,
+  .table-responsive td,
+  .table-responsive tr {
+    width: 100% !important;
+  }
+
+  .table-responsive thead {
+    display: none !important;
+  }
+
+  .table-responsive tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  .table-responsive tbody tr td {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none !important;
+    width: 100%;
+  }
+
+  .table-responsive tbody tr td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+    width: 40%;
+    flex-shrink: 0;
+  }
+
+  .table-responsive tbody tr td.d-flex {
+    flex-direction: column !important;
+    gap: 5px;
+  }
+
+  .table-responsive tbody tr td.d-flex button {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .table-responsive tbody tr td .fa-circle {
+    margin-left: auto;
+  }
+}
+
+/* BADGES AND BUTTONS SMALL SCREENS*/
+@media (max-width: 480px) {
+  .badge {
+    font-size: 0.75rem !important;
+  }
+
+  button.btn-sm {
+    font-size: 0.75rem !important;
+    padding: 5px 8px !important;
+  }
+}
+
+
+.notification-row:hover {
+  background-color: #f8f9fa;
+}
+
+.notification-row.fw-bold {
+  background-color: #eef6ff;
+}
+
+.empty-notification {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}

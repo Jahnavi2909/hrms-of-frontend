@@ -1,0 +1,6 @@
+
+.attendance-history-filter-section {
+    position: sticky;
+    top: 70px;
+    z-index: 1050;
+}
